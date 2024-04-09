@@ -1,0 +1,7 @@
+html,body {
+  all: unset;
+}
+p {
+  margin: 0;
+  padding: 0;
+}

@@ -3,6 +3,11 @@
 <head>
   <title>Kaede Prototype</title>
   <style>
+    html,
+    body {
+      all: unset
+    }
+
     canvas {
       border: 1px solid black;
     }
@@ -10,11 +15,24 @@
 </head>
 
 <body>
-  <center>
-    <canvas id="gameCanvas" width="1000" height="800"></canvas>
-  </center>
+  <div id="container" style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;">
+
+    <!-- <canvas id="gameCanvas" width="1000" height="800" style="position: absolute;"></canvas> -->
+    <canvas id="gameCanvas" width="1000" height="800" style="position: absolute;"></canvas>
+
+    <div onmousemove="aaaa(event)" id="UI" style="position: absolute;  width: 1000px; height: 800px;">
+      <div style="display: flex; justify-content: space-between; width: 100%; height: 100%;">
+        <p>aaa</p>
+        <button onclick="displayHud()" style="height:10% ;">aa</button>
+      </div>
+    </div>
+
+
+  </div>
+
 </body>
 <footer>
+
   <script src="./index.js"></script>
 </footer>
 

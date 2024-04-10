@@ -19,14 +19,15 @@
 
     <canvas id="gameCanvas" width="1000" height="800" style="position: absolute;"></canvas>
 
-    <div onmousemove="collisionDetection(event)" id="UI" style="position: absolute;  width: 1000px; height: 800px;">
+    <div onmousemove="collisionDetection(event)" id="UI"
+      style="position: absolute;  width: 1000px; height: 800px; z-index: 30">
       <div style="display: flex; justify-content: space-between; width: 100%; height: 100%;">
         <p id="te">aaa</p>
         <button onclick="displayHud()" style="height:10% ;">aa</button>
       </div>
     </div>
 
-    <div style="width: 40px; height: 40px; background: red; z-index: 20; position: absolute; left: 1732; top: 426;"
+    <div style="width: 80px; height: 80px; background: red; z-index: 20; position: absolute; left: 1732; top: 426;"
       id="player">
       <!-- <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVtmXIKDS7GZwjRy_RrN4Ab_X9It4pqU503JoClyFOo3Pc_chdNVncSE8VUusvTu5rRU&usqp=CAU"

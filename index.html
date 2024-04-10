@@ -1,4 +1,4 @@
-<html  style="overflow: hidden;">
+<html style="overflow: hidden;">
 
 <head>
   <title>Kaede Prototype</title>
@@ -15,7 +15,8 @@
 </head>
 
 <bod style="overflow: hidden;">
-  <div id="container" style="display: flex; justify-content: center; align-items:start; min-width: 5000px; min-height: 5000px;">
+  <div id="container"
+    style="display: flex; justify-content: center; align-items:start; min-width: 5000px; min-height: 5000px;">
 
     <canvas id="gameCanvas" width="5000px" height="5000px" style="position: absolute;"></canvas>
 
@@ -29,32 +30,20 @@
 
     <div style="width: 200px; height: 200px; background: red; z-index: 20; position: absolute; left: 1732; top: 426;"
       id="player">
-      <img style="width: 200px; height: 200px; object-fit: cover;"
+      <img style="width: 200px; height: 200px; object-fit: cover; display: block;"
         src="
-        https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVtmXIKDS7GZwjRy_RrN4Ab_X9It4pqU503JoClyFOo3Pc_chdNVncSE8VUusvTu5rRU&usqp=CAU" alt="" srcset="">
-    </div>
-    <div style="height: 10px; width: 10px; background: blue; z-index: 20; position: absolute; left: 30;"
-      id="collision_detector_bottom_right">
-    </div>
+        https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVtmXIKDS7GZwjRy_RrN4Ab_X9It4pqU503JoClyFOo3Pc_chdNVncSE8VUusvTu5rRU&usqp=CAU" alt="" srcset="" id="idleanim">
 
-    <div style="height: 10px; width: 10px; background: blue; z-index: 20; position: absolute; left: 30;"
-      id="collision_detector_bottom_left">
-    </div>
-
-    <div style="height: 10px; width: 10px; background: blue; z-index: 20; position: absolute; left: 30;"
-      id="collision_detector_top_left">
-    </div>
-
-    <div style="height: 10px; width: 10px; background: blue; z-index: 20; position: absolute; left: 30;"
-      id="collision_detector_top_right">
+      <img style="width: 200px; height: 200px; object-fit: cover; display: none;" src="./assets/gif/simsonwalk.gif"
+        id="walkanim" alt="" srcset="">
     </div>
 
   </div>
 
-</body>
-<footer>
+  </body>
+  <footer>
 
-  <script src="./index.js"></script>
-</footer>
+    <script src="./index.js"></script>
+  </footer>
 
 </html>

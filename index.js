@@ -1,7 +1,16 @@
 function importModule (path) {
-  let root = "./lib/"
+  let completePath = "./lib/" + path
+
+  // duplicate correction
+  let checker = document.head.getElementsByTagName('script')
+  for (item of checker){
+    if(item.src.includes(completePath)) {
+      return
+    }
+  }
+  
   let eventModule = document.createElement('script');
-  eventModule.src = root + path ;
+  eventModule.src = completePath ;
   document.head.appendChild(eventModule);
 }
 

@@ -1,4 +1,4 @@
-<html>
+<html  style="overflow: hidden;">
 
 <head>
   <title>Kaede Prototype</title>
@@ -14,10 +14,10 @@
   </style>
 </head>
 
-<body>
-  <div id="container" style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;">
+<bod style="overflow: hidden;">
+  <div id="container" style="display: flex; justify-content: center; align-items:start; min-width: 5000px; min-height: 5000px;">
 
-    <canvas id="gameCanvas" width="1000" height="800" style="position: absolute;"></canvas>
+    <canvas id="gameCanvas" width="5000px" height="5000px" style="position: absolute;"></canvas>
 
     <div onmousemove="collisionDetection(event)" id="UI"
       style="position: absolute;  width: 1000px; height: 800px; z-index: 30">
@@ -27,9 +27,9 @@
       </div>
     </div>
 
-    <div style="width: 81px; height: 81px; background: red; z-index: 20; position: absolute; left: 1732; top: 426;"
+    <div style="width: 200px; height: 200px; background: red; z-index: 20; position: absolute; left: 1732; top: 426;"
       id="player">
-      <img style="width: 81px; height: 81px; object-fit: cover;"
+      <img style="width: 200px; height: 200px; object-fit: cover;"
         src="
         https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVtmXIKDS7GZwjRy_RrN4Ab_X9It4pqU503JoClyFOo3Pc_chdNVncSE8VUusvTu5rRU&usqp=CAU" alt="" srcset="">
     </div>

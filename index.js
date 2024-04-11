@@ -16,3 +16,4 @@ function importModule(path) {
 
 importModule("PlayerMovement.js")
 importModule("UtilitySave.js")
+importModule("data/SpriteDict.js")

@@ -7,14 +7,83 @@
     body {
       all: unset
     }
+    p {
+      padding: 0;
+      margin: 0;
+    }
 
     canvas {
       border: 1px solid black;
     }
+    #d-container{
+    }
+    #d-box {
+      transition: all 200ms ease;
+
+    }
+    .d-box {
+      height: 200px; 
+      /* background-color: #36456bb7;  */
+      /* border: 2px solid #fafaf1;  */
+      background: linear-gradient(0deg, rgb(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+      box-sizing: border-box; ;
+      padding-bottom:  52px; 
+      z-index: 60;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      width: 100%; 
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      /* border-radius: 6px; */
+    }
+
+    #d-choicebox{
+      width: 100%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .d-choice-active{
+      background-color:rgb(254, 142, 161) !important;
+      color: rgba(245, 238, 242, 0.8) !important;
+
+    }
+    #d-choice-container{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .d-choice {
+      padding: 10px;
+      width: 60vw;
+      text-align: center;
+      font-weight: 700;
+      color:rgb(254, 142, 161);
+      background-color: rgba(245, 238, 242, 0.8);
+      border-radius: 100px;
+    }
+
+
   </style>
 </head>
 
 <bod style="overflow: hidden;">
+  <div id="d-container" style="display: flex; width: 100vw; height: 100vh; z-index: 50; position: absolute; justify-content: space-between;">
+    <div></div>
+    <div id="d-box" style="display:flex; opacity: 0; box-sizing: border-box;  color:white; flex: 1; height: 100vh; padding: 0; flex-direction: column; align-items: center; justify-content: end;">
+      <div id="d-choicebox">
+        <div id="d-choice-container">
+
+        </div>
+      </div>
+      
+      <div class="d-box">
+        <p id="d-text">Hello</p>
+      </div>
+    </div>
+    <div></div>
+  </div>
   <div id="container" style="display: flex; justify-content: center; align-items:start; min-width: 5000px; min-height: 5000px;">
 
     <canvas id="gameCanvas" width="5000px" height="5000px" style="position: absolute;"></canvas>
@@ -26,7 +95,6 @@
         <button onclick="displayHud()" style="height:10% ;">aa</button>
       </div>
     </div>
-
     <div style="width: 200px; height: 200px; background: red; z-index: 20; position: absolute; left: 1732; top: 426;"
       id="player">
       <img style="width: 200px; height: 200px; object-fit: cover;"

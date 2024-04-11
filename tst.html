@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON File Upload and Read</title>
+</head>
+
+<body>
+
+    <input type="file" id="fileInput">
+    <button onclick="readFile()">Read JSON File</button>
+
+    <script>
+        function readFile() {
+            const fileInput = document.getElementById('fileInput');
+
+            // Check if a file is selected
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    const content = event.target.result;
+                    try {
+                        const jsonData = JSON.parse(content);
+                        console.log("JSON content:", jsonData);
+                        // Here you can do whatever you want with the JSON data
+                        // For example: display it in the console, or on the webpage
+                    } catch (error) {
+                        console.error("Error parsing JSON:", error);
+                    }
+                };
+
+                // Read file as text
+                reader.readAsText(file);
+            } else {
+                alert('Please select a file to read.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
